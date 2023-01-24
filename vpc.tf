@@ -29,7 +29,7 @@ resource "aws_default_route_table" "lab-rt-1" {
   }
 }
 
-resource "aws_route_table_association" "lab-associate-pub" {
+resource "aws_route_table_association" "lab-associate-prv" {
   subnet_id      = aws_subnet.lab-subnet-prv.id
   route_table_id = aws_default_route_table.lab-rt-1.id
 }
